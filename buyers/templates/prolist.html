@@ -1,0 +1,48 @@
+{% extends 'byerhome.html' %}
+{% block navb %}
+<div class="fashion_section">
+    <div id="main_slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <h1 class="fashion_taital"></h1>
+                <div class="fashion_section_2">
+                    <div class="row">
+                        {% for i in pro %}
+                        <div class="card-deck" style="width: 20rem; padding: 15px; margin: 20px 0 20px;">
+                        <div class="card">
+                        <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card {{i.title}}</h5>
+                            <p class="card-text">{{i.description}}</p>
+                            <p class="card-text"><small class="text-muted">{{i.price}}</small></p>
+                            <a class="card-link btn btn-secondary" style="right: 0;" href="">View more</a>
+                        </div>
+                        </div>
+                        <!-- <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                        </div> -->
+                        </div> 
+                        {%endfor%}  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock nav %}
